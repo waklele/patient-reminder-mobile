@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:holadoc/services/api_service.dart';
 import 'package:holadoc/views/pages/sign_in_page.dart';
+import 'package:holadoc/views/pages/welcome_page.dart';
 import 'views/pages/get_pages.dart';
 
 void main() {
@@ -36,10 +37,10 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue.shade800),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF376BF1)),
         useMaterial3: true,
       ),
-      home: const SignInPage(),
+      home: const WelcomePage(),
       getPages: getPages,
       navigatorKey: Get.key,
     );

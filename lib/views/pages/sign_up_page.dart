@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import '../widgets/rectangle_button.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({super.key});
@@ -8,10 +10,22 @@ class SignUpPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("SIGN UP"),
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
       body: SafeArea(
-        child: Container(),
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            children: [
+              Expanded(
+                child: ListView(),
+              ),
+              RectangleButton(
+                text: "Selesai",
+                onPressed: () => Get.offAllNamed("/sign-up-finish"),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
