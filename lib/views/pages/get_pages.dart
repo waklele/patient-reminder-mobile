@@ -1,9 +1,10 @@
 import 'package:get/route_manager.dart';
-import 'package:holadoc/views/pages/home_page.dart';
-import 'package:holadoc/views/pages/sign_in_page.dart';
-import 'package:holadoc/views/pages/sign_up_finish_page.dart';
-import 'package:holadoc/views/pages/sign_up_page.dart';
-import 'package:holadoc/views/pages/welcome_page.dart';
+import 'main_page.dart';
+import 'sign_in_page.dart';
+import 'sign_up_finish_page.dart';
+import 'sign_up_page.dart';
+import 'welcome_page.dart';
+import 'create_opd_page.dart';
 
 final getPages = [
   GetPage(
@@ -23,7 +24,11 @@ final getPages = [
     page: () => const SignUpFinishPage(),
   ),
   GetPage(
-    name: '/home',
-    page: () => const HomePage(),
+    name: '/main',
+    page: () => const MainPage(),
+  ),
+  GetPage(
+    name: '/create-opd',
+    page: () => const CreateOpdPage(),
   ),
 ];

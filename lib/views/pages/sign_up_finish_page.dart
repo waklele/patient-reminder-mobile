@@ -18,7 +18,7 @@ class SignUpFinishPage extends StatelessWidget {
               text: "Masuk ke Beranda",
               backgroundColor: Colors.white,
               textColor: Theme.of(context).primaryColor,
-              onPressed: () => Get.offAllNamed("/home"),
+              onPressed: () => Get.offAllNamed("/main"),
             ),
           ],
         ),
