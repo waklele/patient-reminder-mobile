@@ -101,6 +101,8 @@ class _HomeFragmentState extends State<HomeFragment>
                   "Daftar Kunjungan",
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
+                const SizedBox(height: 14),
+                cardNoData(),
               ],
             ),
           ),
@@ -145,6 +147,37 @@ class _HomeFragmentState extends State<HomeFragment>
                 style: TextStyle(fontSize: 10, color: Colors.black),
               )
             ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget cardNoData() {
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: const BorderRadius.all(Radius.circular(14)),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.3),
+            spreadRadius: 0,
+            blurRadius: 5,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: const SizedBox(
+        width: double.maxFinite,
+        height: kToolbarHeight * 2,
+        child: Center(
+          child: Text(
+            "Belum ada Data",
+            style: TextStyle(
+              fontSize: 16,
+              color: Colors.grey,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
       ),

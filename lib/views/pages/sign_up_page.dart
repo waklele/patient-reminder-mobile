@@ -9,7 +9,15 @@ class SignUpPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("SIGN UP"),
+        title: const Text(
+          "Daftar",
+          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+        ),
+        centerTitle: true,
+        leading: const BackButton(
+          color: Colors.grey,
+        ),
+        backgroundColor: Colors.white,
       ),
       body: SafeArea(
         child: Padding(
